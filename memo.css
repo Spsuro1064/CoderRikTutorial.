@@ -1,0 +1,116 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: cursive ;
+}
+
+/* Ribbon Screen */
+.ribbon-screen {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3, #fad0c4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ribbon-left, .ribbon-right {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background: red;
+  transition: transform 1.5s ease;
+}
+
+.ribbon-left { left: 0; }
+.ribbon-right { right: 0; }
+
+.ribbon-left.cut { transform: translateX(-100%); }
+.ribbon-right.cut { transform: translateX(100%); }
+
+.scissor {
+  font-size: 100px;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+/* Main content */
+.main-content {
+  display: none;
+  min-height: 100vh;
+  background: #f0f8ff;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background: yellow;
+  padding: 20px;
+  text-align: center;
+}
+header h1 {
+  margin: 0 0 10px 0;
+}
+nav button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  background: orange;
+  color: white;
+}
+nav button:hover {
+  background: darkorange;
+}
+
+/* Body sections */
+main {
+  padding: 20px;
+  text-align: center;
+}
+.section {
+  display: block;
+}
+.section.hidden {
+  display: none;
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.gallery img {
+  width: 350px;
+  border-radius: 30px;
+}
+
+/* Videos */
+video {
+      width: 60%; /* Resize video */
+      border-radius: 30px; /* Rounded corners */
+      box-shadow: 0 0 20px rgba(0,0,0,0.5); /* Shadow effect */
+      filter: grayscale(50%) brightness(1.2); /* Add filters */
+    }
+     .video-container {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+/* Footer */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;  /* pushes footer down */
+}
